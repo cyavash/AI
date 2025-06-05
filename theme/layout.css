@@ -1,0 +1,20 @@
+:root {
+  --max-width: 1200px;
+  --grid-gap: 1rem;
+  --columns: 12;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--grid-gap);
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
